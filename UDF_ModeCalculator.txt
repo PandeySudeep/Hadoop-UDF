@@ -1,0 +1,59 @@
+package org.apache.pig.tutorial;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+import org.apache.pig.data.DataBag;
+import org.apache.pig.data.TupleFactory;
+
+
+public class ModeCalculator extends EvalFunc<Tuple> /*implements Algebraic*/{
+
+	private static TupleFactory mytuplefact = TupleFactory.getInstance();
+
+		List<String> mymodelist = new ArrayList<String>();
+		int modeelementcount=0;        
+		List<String> myinputlist = new ArrayList<String>();
+	
+	public Tuple exec (Tuple input) throws IOException{
+/*At this point, check for invalid inputs and return null if necessary*/
+		try{
+				DataBag mybag = (DataBag)input.get(0); 
+				Iterator<Tuple> myiter = mybag.iterator (); 
+				while(myiter.hasNext()){                                                                                   
+					Tuple t = (Tuple)myiter.next();
+					myinputlist.add((String)t.get(0));                                                                   }                                                                                         
+            } catch (Exception e){
+				throw new IOException ("Caught new exception regarding input", e);
+		 }
+			
+		for(int i=0; i<myinputlist.size();i++){
+			
+				int mycountII=0;    
+				for(int m=0; m<myinputlist.size(); m++){
+					
+					String checkitem = myinputlist.get(m);
+					if(myinputlist.get(i).equals(checkitem)){ 
+						mycountII = mycount+1               
+			}                                  
+		 }
+					if(mycountII==modeelementcount){
+					
+						if(!mymodelist.contains(myinputlist.get(i))){
+							mymodelist.add(myinputlist.get(i));
+				 }}
+					else if(mycountII>modeelementcount){
+						
+						mymodelist.clear();
+						mymodelist.add(myinputlist.get(i));   
+						modeelementcount=mycountII;                    
+                           }
+								 }
+/*At this point, we have created a list of string values which have highest occurrence in the source data*/		                                                                                                                          
+		return mytuplefact.newTuple(mymodelist);
+	}
+}
