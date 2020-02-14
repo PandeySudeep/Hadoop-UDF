@@ -1,0 +1,6 @@
+Register tutorial.jar;
+A = LOAD 'FieldingStats.txt' USING PigStorage(',') AS (playerID:chararray, yearID:chararray, stint:int, teamID:chararray, lgID:chararray, POS:chararray, G:int, GS:int,InnOuts:long, PutOuts:int, A:int, E:int, DP:int, PB:int, PassedBalls:int, WP:int, SB:int, CS:int, ZR:chararray);
+B = FOREACH A GENERATE teamID;
+C = GROUP B ALL;
+D = FOREACH C GENERATE org.apache.pig.tutorial.ModeCalculator(B);
+DUMP D;

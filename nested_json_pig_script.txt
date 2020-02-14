@@ -1,0 +1,8 @@
+register /path to json file;       
+register /path to elephant-bird-core.jar;
+register /path to elephant-bird-pig.jar;
+
+json_data = load ‘/path to file’ using com.twitter.elephantbird.pig.load.JsonLoader(‘-nestedLoad’);
+toppings = foreach json-data generate flatten($0# ‘Toppings’)
+distinct_toppings = distinct toppings;
+dump distinct_toppings;  

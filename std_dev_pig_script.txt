@@ -1,0 +1,5 @@
+E = FOREACH D GENERATE $1 AS EngagementPerPlaybackInstance;
+F = GROUP E ALL;
+G = FOREACH F GENERATE $1;
+StdDeviation = FOREACH G GENERATE org.apache.pig.tutorial.StdDev($0) as StandardDeviation;
+DUMP StdDeviation;

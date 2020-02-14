@@ -1,0 +1,8 @@
+Register tutorial.jar;
+A = LOAD 'StdDevSampleData.txt' USING PigStorage(',') AS (id:chararray,movieid:chararray,name:chararray,starttime:chararray,playbackinstanceid:chararray,actionstate:chararray,hbtime:chararray,deviceid:chararray,locationid:chararray);
+A1 = FILTER A BY (actionstate == 'START' OR actionstate == 'STOP');
+A2 = FOREACH A1 GENERATE playbackinstanceid, hbtime;
+B = GROUP A2 BY playbackinstanceid;
+C = FOREACH B GENERATE group, A2.hbtime;
+D = FOREACH C GENERATE $0,org.apache.pig.tutorial.EngagementDuration($1);
+DUMP D;

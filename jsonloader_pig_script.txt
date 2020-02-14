@@ -1,0 +1,7 @@
+Register /path to elephant-bird-1.0.jar;
+
+raw_data = load ‘path to the file’ using com.twitter.elephanebird.pig.load.LzoJsonLoader() as (json: map []);
+
+keys = foreach raw_data generate (int)json# ‘key1’ as my_count, (int)json# ‘key3’ as key3_count;
+
+raw_data = load '/path/to/your_lzop_data' using com.twitter.elephantbird.pig.load.LzoJsonLoader();
