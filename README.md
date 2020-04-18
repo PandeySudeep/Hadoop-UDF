@@ -1,6 +1,6 @@
 # Writing User Defined Functions (UDFs) for Hadoop processing
 
-I present this project after conducting some distinct experiments on batch-processing by Pig Latin. The article doesn’t simply describe theory and facts on Pig Latin that a reader could find somewhere else. The article actually covers some experimental and practical mapreduce tasks improvised by myself using a single node Hortonworks cluster implementing YARN framework. I will be writing some JAVA UDFs to process batch data and running it to produce result in a single node cluster. The key focus of the article is on JAVA UDF.
+I present this project after conducting some distinct experiments on batch-processing by Pig Latin. The key focus of the article is on JAVA UDF.
 
 ## Section I: Source Data and Metadata Details:
 
