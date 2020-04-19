@@ -24,10 +24,4 @@ The sample data 'heartbeat_sample.png' represents media(or movie) streaming data
 
 The Pig Script-hb_pig_script.txt and UDF - eng_duration_UDF.txt will calculate the engagement duration of a particular movie per playback instance id. 
 
-I further took the above application to derive ‘Population Standard Deviation’ from engagement durations for all the movies-'std_dev_pig_script.txt' and UDF - 'std_dev_UDF.txt'
-
-## Section V: End Notes
-
-As a Pig Latin Engineer, I am also interested in other key topics like performance and optimization (http://pig.apache.org/docs/r0.15.0/perf.html ), HDFS architecture (http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsUserGuide.html ), MapReduce Program (http://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html ), YARN Framework (http://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html ). 
-
-#### Pig Latin is an awesome MapReduce Programming Language and I Wish You All Good Luck with it.
+I further took the above application to derive ‘Population Standard Deviation’ from engagement durations for all the movies-'std_dev_pig_script.txt' and UDF - 'std_dev_UDF.txt'.
