@@ -4,10 +4,7 @@ I present this project after conducting some distinct experiments on batch-proce
 
 ## Section I: Source Data and Metadata Details:
 
-The source data for the first UDF was chosen to be baseball data holding fielding data of various players (baseball_data_sample.csv). I will be writing a UDF that takes ‘DataBag’ as an input. The ‘DataBag’ will hold ‘Tuples’ filled with single ‘Chararray’ fields. The UDF will be able to determine which string(s) is/are the most frequently occurring ones in millions of tuples. Following is the list of data field elements:
-
-playerID – unique identifier of a player,                                                                                             yearID – year of games played,                                                                                                         stint – duration,                                                                                                                       teamID – unique identifier of team name,                                                                                                  lgID – League ID, POS - player position, G – Games played, GS – Games Started, InnOuts – amount of innings played multiplied by 3,     PO – PutOuts,E - Error, DP – Double Plays, PB – Passed Balls, WP – Wild Pitches, SB – Stolen Bases, CS – Caught Stealing, ZR – Zone Rating
-
+The source data for the first UDF is - baseball_data_sample.csv. The UDF will be able to determine which string(s) is/are the most frequently occurring one(s).
  
 Some key metadata on file:
 Total characters = 8063747
