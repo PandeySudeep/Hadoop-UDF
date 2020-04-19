@@ -14,15 +14,9 @@ Size = 7875 KB
 
 ## Section II: Writing Pig UDF to calculate most frequently occurring string(s) in DataBag of tuples holding Strings:
 
-/* I first wrote a Python code snippet to model the functionality of the UDF using a python list. This was done so that similar logic could be modeled while writing JAVA API for Pig Latin UDF*/ (please see Python.png)
- 
-
-Before writing Pig UDF, it was essential to make sure the input was a bag with tuples carrying single field-value. Hence, following Pig Script was written: (see Pigscript.txt)
-
-The UDF present in Pigscript.txt will be called ‘ModeCalculator’ and will take an argument of a bag with tuples carrying string type values. The result will be – ‘a list of teamID’s with most number of players analyzed’ in the source file.
+The UDF present in Pigscript.txt will be called ‘ModeCalculator’ and will take an argument of a bag with tuples carrying string type values.
 
 UDF is present in file - UDF_ModeCalculator.txt.
-Resulting mode of above program was ---   ((CHN))
 
 ## Section III: Load/Store Functions on various types of data formats.
 
