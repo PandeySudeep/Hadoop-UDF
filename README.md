@@ -18,17 +18,7 @@ The UDF present in Pigscript.txt will be called ‘ModeCalculator’ and will ta
 
 UDF is present in file - UDF_ModeCalculator.txt.
 
-## Section III: Load/Store Functions on various types of data formats.
-
-There are various Load/Store functions available in Pig Latin and also API can be used to write our own custom functions. However, this article will be limited by scope on few of the functions only. This article won’t talk about them but instead use them experimentally.
-
-(i)	JsonStorage/JsonLoader:
-
-Given a json file in HDFS (json_sample.png), the script (jsonloader_pig_script.txt) loads data into Pig:
-
-If a JSON data is in nested form as shown in nester_json_sample.png, relevant pig script to load the data is present in nested_json_pig_script.txt.
-
-## Section IV: Other JAVA UDFs I wrote:
+## Section III: Other JAVA UDFs I wrote:
 
 The sample data 'heartbeat_sample.png' represents media(or movie) streaming data (I call each line of record as a ‘heartbeat’). The fields are heartbeat id, movie id, movie name, timestamp of heartbeat generation, particular instance id unique to the viewer, state of stream, timestamp representing the end of the streaming-state, device id, and location id.
 
